@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NZE AND SON,S LINKS ENTERPRISES</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, gold, #b8860b);
+    padding: 20px;
+    text-align: center;
+    color: #000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* BUTTONS */
+.top-buttons {
+    text-align: center;
+    margin: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 5px;
+    color: #000;
+    background: gold;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background: #ffd700;
+}
+
+/* FORM SECTION */
+.container {
+    padding: 20px;
+}
+
+h2 {
+    color: gold;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.product {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid gold;
+}
+
+/* INPUTS */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+    background: gold;
+    color: black;
+    padding: 15px;
+    border: none;
+    margin-top: 15px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #ffd700;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #000;
+    color: gold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>NZE AND SON,S LINKS ENTERPRISES</h1>
+    <p>Dealers in High Quality Plumbing Materials & Doors</p>
+</header>
+
+<div class="top-buttons">
+    <a href="tel:08066700435" class="btn">📞 Call Now</a>
+    <a href="https://wa.me/2348066700435" class="btn">💬 WhatsApp</a>
+</div>
+
+<div class="container">
+    <h2>Customer Order Form</h2>
+
+    <form onsubmit="sendToWhatsApp(); return false;">
+
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Phone Number</label>
+        <input type="text" id="phone" required>
+
+        <h2>Select Products</h2>
+
+        <div class="products">
+
+            <div class="product"><input type="checkbox" value="Pumping machine"> Pumping machine</div>
+            <div class="product"><input type="checkbox" value="Shower bath"> Shower bath</div>
+            <div class="product"><input type="checkbox" value="Wash hand basin"> Wash hand basin</div>
+            <div class="product"><input type="checkbox" value="Bath tub"> Bath tub</div>
+            <div class="product"><input type="checkbox" value="Cabinet"> Cabinet</div>
+            <div class="product"><input type="checkbox" value="Water heater"> Water heater</div>
+            <div class="product"><input type="checkbox" value="W.C Set"> W.C Set</div>
+            <div class="product"><input type="checkbox" value="Cubicle"> Cubicle</div>
+            <div class="product"><input type="checkbox" value="Shower set"> Shower set</div>
+            <div class="product"><input type="checkbox" value="Foreign mirror"> Foreign mirror</div>
+            <div class="product"><input type="checkbox" value="PPR pipes"> PPR pipes</div>
+            <div class="product"><input type="checkbox" value="Fittings"> Fittings</div>
+
+        </div>
+
+        <label>Additional Details</label>
+        <textarea id="details"></textarea>
+
+        <button class="submit-btn" type="submit">Submit Order</button>
+    </form>
+</div>
+
+<footer>
+    © 2026 NZE AND SON,S LINKS ENTERPRISES
+</footer>
+
+<script>
+function sendToWhatsApp() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let details = document.getElementById("details").value;
+
+    let selected = [];
+    document.querySelectorAll('input[type=checkbox]:checked').forEach((item) => {
+        selected.push(item.value);
+    });
+
+    let message = "Hello, I want to place an order:%0A";
+    message += "Name: " + name + "%0A";
+    message += "Phone: " + phone + "%0A";
+    message += "Products: " + selected.join(", ") + "%0A";
+    message += "Details: " + details;
+
+    window.open("https://wa.me/2348066700435?text=" + message, "_blank");
+}
+</script>
+
+</body>
+</html>
