@@ -40,6 +40,19 @@ header h1 {
     font-size: 26px;
 }
 
+/* IMAGE GRID */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
 /* BUTTONS */
 .top-buttons {
     text-align: center;
@@ -124,13 +137,33 @@ footer {
 
 <!-- HEADER IMAGE -->
 <div class="header-img">
-    <img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/6c0f78ca2ae3a97531eab89bea41c5319c6e711e/.github/workflows/1776786924336.png" alt="Business Banner">
+    <img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/6c0f78ca2ae3a97531eab89bea41c5319c6e711e/.github/workflows/1776786924336.png">
 </div>
 
 <header>
     <h1>NZE AND SON,S LINKS ENTERPRISES</h1>
     <p>Dealers in High Quality Plumbing Materials & Doors</p>
 </header>
+
+<!-- IMAGE GALLERY -->
+<div class="gallery">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250517-093458.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-130130.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-130549.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-130958.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-131016.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-131107.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-131124.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-131232.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-131247.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-131416.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-132043.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-132101.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250807-132232.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250508-095513.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250508-095525.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/NZE-AND-SONS-LINK-ENTERPRISES-/7b74b52fb13bc904300ab14a8dad5610d480e4c0/Screenshot_20250508-095621.jpg">
+</div>
 
 <div class="top-buttons">
     <a href="tel:08066700435" class="btn">📞 Call Now</a>
@@ -141,7 +174,6 @@ footer {
     <h2>Customer Order Form</h2>
 
     <form onsubmit="sendToWhatsApp(); return false;">
-
         <label>Full Name</label>
         <input type="text" id="name" required>
 
@@ -151,7 +183,6 @@ footer {
         <h2>Select Products</h2>
 
         <div class="products">
-
             <div class="product"><input type="checkbox" value="Pumping machine"> Pumping machine</div>
             <div class="product"><input type="checkbox" value="Shower bath"> Shower bath</div>
             <div class="product"><input type="checkbox" value="Wash hand basin"> Wash hand basin</div>
@@ -164,7 +195,6 @@ footer {
             <div class="product"><input type="checkbox" value="Foreign mirror"> Foreign mirror</div>
             <div class="product"><input type="checkbox" value="PPR pipes"> PPR pipes</div>
             <div class="product"><input type="checkbox" value="Fittings"> Fittings</div>
-
         </div>
 
         <label>Additional Details</label>
